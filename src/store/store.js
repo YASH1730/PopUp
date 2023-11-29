@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 // importing the reducers 
-import Slice from "../feature/Slice";
+import ModalBox from "../feature/ModalBoxReducers";
 // for persisting the reducers States 
 import {combineReducers} from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
@@ -13,7 +13,7 @@ const persistConfig = {
 }
 
 const reducer = combineReducers({
-    Slice
+    ModalBox
 })
 
 const persistState = persistReducer(persistConfig,reducer)
